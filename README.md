@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bernardosecades/blue-split.svg?branch=master)](https://travis-ci.org/bernardosecades/blue-split)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bernardosecades/blue-split/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bernardosecades/blue-split/?branch=master)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/a20c221e-8e12-4c6d-8d68-658aae0aed83/mini.png)](https://insight.sensiolabs.com/projects/a20c221e-8e12-4c6d-8d68-658aae0aed83)
 
 API Blueprint renderer.
  
