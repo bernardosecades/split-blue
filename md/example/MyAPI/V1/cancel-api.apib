@@ -1,0 +1,70 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# Provider API
+
+NOTE: This document is a **work in progress**.
+
+## Valuate [/api/provider/cancel]
+
+### Cancel an availability [GET]
+
++ Request (application/json)
+
+    + Body
+
+            {
+                "checkout_data": [
+                    {
+                        "user_data": [],
+                        "payment": ""
+                    }
+                ],
+                "ticket": [
+                    {
+                    "a": "xxx",
+                    "b": "xxx"
+                    }
+                ],
+                "atrapalo_order_id": 178176                                                                               
+            }
+
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "provider_order_information": [
+                    {
+                        "locata": "xxx"              
+                    }
+                ]                                            
+            }
+                            
++ Response 400 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "errors": [
+                    {
+                        "yyy": "invalid parameter"              
+                    }
+                ]                                            
+            }        
+        
++ Response 402 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "errors": [
+                    {
+                        "change_price": "xxx",
+                        "no_availability": "xxx",
+                        "unknown_exception": "xxx",
+                        "timeout_exception": "xxx"                                                        
+                    }
+                ]                                            
+            }                

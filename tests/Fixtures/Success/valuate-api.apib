@@ -1,0 +1,115 @@
+FORMAT: 1A
+HOST: http://localhost:3000
+
+# Provider API
+
+NOTE: This document is a **work in progress**.
+
+## Valuate [/api/provider/valuate]
+
+### Valuate [POST]
+
++ Request OK (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "checkIn": "YYY-mm-dd",
+                "checkOut": "YYY-mm-dd",
+                "occupancy": "AA",
+                "hotelCode": "AA",
+                "locationCode": "AA"
+            }
+
++ Response 200 (text/plain;charset=UTF-8)
+
+    This is an example
+
+
+
++ Request OK (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "checkIn": "YYY-mm-dd",
+                "checkOut": "YYY-mm-dd",
+                "occupancy": "A",
+                "hotelCode": "A",
+                "locationCode": "A"
+            }
+
++ Response 200 (application/xml;charset=UTF-8)
+
+    + Body
+
+<!-- include markdown-pp (without spaces before) -->
+!INCLUDE "Response/a.xml"
+
++ Request OK (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "checkIn": "YYY-mm-dd",
+                "checkOut": "YYY-mm-dd",
+                "occupancy": "A",
+                "hotelCode": "H",
+                "locationCode": "C"
+            }
+
++ Response 200 (application/json;charset=UTF-8)
+
+    + Body
+
+<!-- include markdown-pp (without spaces before) -->
+!INCLUDE "Response/b.json"
+
++ Request Bad Params (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "checkIn": "YYY-mm-dd",
+                "checkOut": "YYY-mm-dd",
+                "occupancy": "A",
+                "hotelCode": "B",
+                "locationCode": "?"
+            }
+
+
++ Response 400 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "errors": [
+                    {
+                        "locationCode": "invalid parameter"
+                    }
+                ]
+            }
+
++ Request No availability (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "checkIn": "YYY-mm-dd",
+                "checkOut": "YYY-mm-dd",
+                "occupancy": "A",
+                "hotelCode": "B",
+                "locationCode": "Z"
+            }
+
++ Response 402 (application/json;charset=UTF-8)
+
+    + Body
+
+            {
+                "errors": [
+                    {
+                        "no_availability": "xxx"
+                    }
+                ]
+            }

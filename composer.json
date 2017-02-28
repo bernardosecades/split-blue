@@ -1,0 +1,31 @@
+{
+    "name": "atrapalo/accommodation-mocks",
+    "description": "Blueprint files to generate documentation and mock servers",
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "DT",
+            "email": "dt@atrapalo.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Atrapalo\\BlueSplit\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^5.5|^7.0",
+        "symfony/console": "^2.2|^3.0",
+        "symfony/process": "^2.2|^3.0",
+        "symfony/finder": "^2.2|^3.0",
+        "symfony/filesystem": "^2.2|^3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    },
+    "suggest": {
+        "https://github.com/jreese/markdown-pp": "The Markdown Preprocessor is a Python module designed to add extended features on top of the excellent Markdown syntax defined by John Grub",
+        "https://github.com/danielgtaylor/aglio": "An API Blueprint renderer"
+    }
+}

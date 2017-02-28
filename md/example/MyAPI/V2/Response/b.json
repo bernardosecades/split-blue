@@ -1,0 +1,16 @@
+{
+    "rate_provider": [
+        {
+            "provider_cancel_policies": "xxx",
+            "deatiledRate": "xxx",
+            "remarks": "xxx"
+        }
+    ],
+    "ticket": [
+        {
+            "a": "xxx",
+            "b": "xxx"
+        }
+    ],
+    "ttl": 3600
+}
