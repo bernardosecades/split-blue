@@ -133,8 +133,6 @@ and generate output files (`out.apib` and `out.html`) in folder `Build`, if this
 Example content `index.apib`:
 
 ```apib
-!INCLUDE "../availability-api.apib"
-!INCLUDE "../booking-api.apib"
 !INCLUDE "../cancel-api.apib"
 !INCLUDE "../valuate-api.apib"
 ```
