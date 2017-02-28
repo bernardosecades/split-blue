@@ -1,6 +1,7 @@
 # BlueSplit
 
 [![Build Status](https://travis-ci.org/bernardosecades/blue-split.svg?branch=master)](https://travis-ci.org/bernardosecades/blue-split)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bernardosecades/blue-split/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bernardosecades/blue-split/?branch=master)
 
 API Blueprint renderer.
  
