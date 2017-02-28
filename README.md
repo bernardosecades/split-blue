@@ -1,6 +1,6 @@
 # BlueSplit
 
-[![Build Status](https://travis-ci.org/bernardosecades/bluesplit.svg?branch=master)](https://travis-ci.org/bernardosecades/bluesplit)
+[![Build Status](https://travis-ci.org/bernardosecades/blue-split.svg?branch=master)](https://travis-ci.org/bernardosecades/blue-split)
 
 API Blueprint renderer.
  
