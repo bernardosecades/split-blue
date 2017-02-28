@@ -80,7 +80,7 @@ If you execute command ``./bin/blue-split c` from this tool you will generate tw
 - Build/out.apib (with content of a.xml file)
 - Build/out.html (documentation html of your API with content a.xml file)
 
-The content of file `Build/out/apib` will be:
+The content of file `Build/out.apib` will be:
 
 ```apib
 + Request OK (application/json;charset=UTF-8)
