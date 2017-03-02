@@ -3,10 +3,10 @@
 
 require __DIR__ . '/../src/bootstrap.php';
 
-use Atrapalo\BlueSplit\Command\CompileCommand;
+use Atrapalo\SplitBlue\Command\CompileCommand;
 use Symfony\Component\Console\Application;
 
 
-$application = new Application('BlueSplit', 'v1');
+$application = new Application('SplitBlue', 'v1');
 $application->add(new CompileCommand());
 $application->run();

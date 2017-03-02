@@ -77,7 +77,7 @@ Where file `Response\a.xml` will have:
 
 ```
 
-If you execute command ``./bin/blue-split c` from this tool you will generate two files:
+If you execute command ``./bin/split-blue c` from this tool you will generate two files:
 
 - Build/out.apib (with content of a.xml file)
 - Build/out.html (documentation html of your API with content a.xml file)
@@ -120,13 +120,13 @@ It will be ready to load in your mock server.
 ### Generate HTML Documentation and files to load in Mock Server
 
 ```bash
-./bin/blue-split c [path]
+./bin/split-blue c [path]
 ```
 
 Example 1:
 
 ```bash
-./bin/blue-split c
+./bin/split-blue c
 ```
 
 If you do not put argument, the command will search by default inside of folder `md`. It will try to search all files named like `index.apib` to  process include sentences of that file
@@ -149,7 +149,7 @@ So this command will generate files:
 Example 2:
 
 ```bash
-./bin/blue-split c md/example/MyAPI/V2
+./bin/split-blue c md/example/MyAPI/V2
 ```
 
 - md/example/MyAPI/V2/Compile/Build/out.apib
@@ -167,11 +167,11 @@ vendor/bin/phpunit -c .
 
 ## Screenshots
 
-`./bin/blue-split c`
+`./bin/split-blue c`
 
 ![Command without argument](resources/command-without-argument.png)
 
-`./bin/blue-split c md/example/MyAPI/V2`
+`./bin/split-blue c md/example/MyAPI/V2`
 
 ![Command with argument](resources/command-with-argument.png)
 
