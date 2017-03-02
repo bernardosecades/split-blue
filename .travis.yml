@@ -13,4 +13,4 @@ before_script:
   - ./install.sh
 
 script:
-  - phpunit --coverage-text tests
+  - vendor/bin/phpunit --coverage-text tests
