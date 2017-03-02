@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Atrapalo\\BlueSplit\\": "src/"
+            "Atrapalo\\SplitBlue\\": "src/"
         }
     },
     "require": {

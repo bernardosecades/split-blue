@@ -2,7 +2,7 @@
 
 namespace Tests\Atrapalo\Accommodation\Mocks\Command;
 
-use Atrapalo\BlueSplit\Command\CompileCommand;
+use Atrapalo\SplitBlue\Command\CompileCommand;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Filesystem\Filesystem;
 

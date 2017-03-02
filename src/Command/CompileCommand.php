@@ -23,10 +23,10 @@
  * SOFTWARE.
  */
 
-namespace Atrapalo\BlueSplit\Command;
+namespace Atrapalo\SplitBlue\Command;
 
-use Atrapalo\BlueSplit\Exception\DocException;
-use Atrapalo\BlueSplit\Exception\MockException;
+use Atrapalo\SplitBlue\Exception\DocException;
+use Atrapalo\SplitBlue\Exception\MockException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

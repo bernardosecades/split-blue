@@ -23,7 +23,7 @@
  * SOFTWARE.
  */
 
-namespace Atrapalo\BlueSplit\Exception;
+namespace Atrapalo\SplitBlue\Exception;
 
 use Exception;
 
