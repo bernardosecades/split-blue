@@ -1,6 +1,6 @@
 {
-    "name": "atrapalo/accommodation-mocks",
-    "description": "Blueprint files to generate documentation and mock servers",
+    "name": "atrapalo/split-blue",
+    "description": "Split Blueprint files (request/response sections) to generate documentation and mock servers files",
     "type": "project",
     "license": "proprietary",
     "authors": [
@@ -12,6 +12,11 @@
     "autoload": {
         "psr-4": {
             "Atrapalo\\SplitBlue\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
         }
     },
     "require": {
