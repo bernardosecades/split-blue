@@ -23,10 +23,10 @@
  * SOFTWARE.
  */
 
-namespace Atrapalo\SplitBlue\Command;
+namespace BernardoSecades\SplitBlue\Command;
 
-use Atrapalo\SplitBlue\Exception\DocException;
-use Atrapalo\SplitBlue\Exception\MockException;
+use BernardoSecades\SplitBlue\Exception\DocException;
+use BernardoSecades\SplitBlue\Exception\MockException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;

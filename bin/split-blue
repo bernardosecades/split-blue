@@ -3,7 +3,7 @@
 
 require __DIR__ . '/../src/bootstrap.php';
 
-use Atrapalo\SplitBlue\Command\CompileCommand;
+use BernardoSecades\SplitBlue\Command\CompileCommand;
 use Symfony\Component\Console\Application;
 
 

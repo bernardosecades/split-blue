@@ -11,7 +11,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Atrapalo\\SplitBlue\\": "src/"
+            "BernardoSecades\\SplitBlue\\": "src/"
         }
     },
     "autoload-dev": {

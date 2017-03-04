@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Atrapalo\Accommodation\Mocks\Command;
+namespace Tests\BernardoSecades\Accommodation\Mocks\Command;
 
-use Atrapalo\SplitBlue\Command\CompileCommand;
+use BernardoSecades\SplitBlue\Command\CompileCommand;
 use Symfony\Component\Console\Tester\CommandTester;
 use Symfony\Component\Filesystem\Filesystem;
 
