@@ -2,7 +2,7 @@
     "name": "bernardosecades/split-blue",
     "description": "Split Blueprint files (request/response sections) to generate documentation and mock servers files",
     "type": "project",
-    "license": "proprietary",
+    "license": "MIT",
     "authors": [
         {
             "name": "DT",
