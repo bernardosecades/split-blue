@@ -79,13 +79,8 @@ class CompileCommand extends Command
         $output->writeln('');
         $this->createDocFiles();
         $output->writeln('');
-        $this->renderFilesInfo();
 
-        if ($this->hasGeneratedFiles()) {
-            return 0;
-        }
-
-        return 1;
+        return $this->renderFilesInfo();
     }
 
     /**
@@ -100,33 +95,39 @@ class CompileCommand extends Command
     protected function createMockFiles()
     {
         $files = $this->getFilesToMock();
-        $this->output->writeln('<info>Compiling "apib" files to mock</info>');
-        $progress = new ProgressBar($this->output, count($files));
-        $progress->setBarCharacter('<fg=magenta>=</>');
-        $progress->setProgressCharacter("\xF0\x9F\x8D\xBA");
 
-        foreach ($files as $file) {
-            $this->compileToMock($file->getRealPath());
-            $progress->advance();
+        if ($files->count()) {
+            $this->output->writeln('<info>Compiling "apib" files to mock</info>');
+            $progress = new ProgressBar($this->output, count($files));
+            $progress->setBarCharacter('<fg=magenta>=</>');
+            $progress->setProgressCharacter("\xF0\x9F\x8D\xBA");
+
+            foreach ($files as $file) {
+                $this->compileToMock($file->getRealPath());
+                $progress->advance();
+            }
+
+            $progress->finish();
         }
-
-        $progress->finish();
     }
 
     protected function createDocFiles()
     {
         $files = $this->getFilesToDoc();
-        $this->output->writeln('<info>Creating documentation from mock files compiled</info>');
-        $progress = new ProgressBar($this->output, count($files));
-        $progress->setBarCharacter('<fg=magenta>=</>');
-        $progress->setProgressCharacter("\xF0\x9F\x8D\xBA");
 
-        foreach ($files as $file) {
-            $this->compileToDoc($file->getRealPath());
-            $progress->advance();
+        if ($files->count()) {
+            $this->output->writeln('<info>Creating documentation from mock files compiled</info>');
+            $progress = new ProgressBar($this->output, count($files));
+            $progress->setBarCharacter('<fg=magenta>=</>');
+            $progress->setProgressCharacter("\xF0\x9F\x8D\xBA");
+
+            foreach ($files as $file) {
+                $this->compileToDoc($file->getRealPath());
+                $progress->advance();
+            }
+
+            $progress->finish();
         }
-
-        $progress->finish();
     }
 
     /**
@@ -267,19 +268,31 @@ class CompileCommand extends Command
         return $files;
     }
 
+    /**
+     * @return int
+     */
     protected function renderFilesInfo()
     {
-        $this->output->writeln('<info>Files generated:</info>');
+        if ($this->hasGeneratedFiles()) {
 
-        $this->output->writeln('<fg=black;bg=cyan>Mock Files:</>');
-        foreach ($this->compiledFiles as $nameFile) {
-            $this->output->writeln($nameFile);
+            $this->output->writeln('<info>Files generated:</info>');
+
+            $this->output->writeln('<fg=black;bg=cyan>Mock Files:</>');
+            foreach ($this->compiledFiles as $nameFile) {
+                $this->output->writeln($nameFile);
+            }
+
+            $this->output->writeln('<fg=black;bg=cyan>Doc Files:</>');
+            foreach ($this->docCreatedFiles as $nameFile) {
+                $this->output->writeln($nameFile);
+            }
+
+            return 0;
         }
 
-        $this->output->writeln('<fg=black;bg=cyan>Doc Files:</>');
-        foreach ($this->docCreatedFiles as $nameFile) {
-            $this->output->writeln($nameFile);
-        }
+        $this->output->writeln('<fg=black;bg=red>There are not index files to generate mock or doc files</>');
+
+        return 1;
     }
 
     /**

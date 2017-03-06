@@ -53,8 +53,7 @@ class CompileCommandTest extends \PHPUnit_Framework_TestCase
     {
         $this->commandTester->execute($this->getErrorArgumentsCommand());
         $this->assertEquals(1, $this->commandTester->getStatusCode());
-        $this->assertContains('Compiling "apib" files to mock', $this->commandTester->getDisplay());
-        $this->assertContains('Creating documentation from mock files compiled', $this->commandTester->getDisplay());
+        $this->assertContains('There are not index files to generate mock or doc files', $this->commandTester->getDisplay());
         $this->assertDirectoryNotExists($this->getPathErrorFixtures() . 'Build');
     }
 
