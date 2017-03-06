@@ -30,6 +30,9 @@
         "phpunit/phpunit": "^5.3",
         "bernardosecades/packagist-security-checker": "dev-master"
     },
+    "bin": [
+        "bin/split-blue"
+    ],
     "suggest": {
         "https://github.com/jreese/markdown-pp": "The Markdown Preprocessor is a Python module designed to add extended features on top of the excellent Markdown syntax defined by John Grub",
         "https://github.com/danielgtaylor/aglio": "An API Blueprint renderer"

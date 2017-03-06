@@ -58,9 +58,8 @@ class CompileCommand extends Command
             ->setDescription('Compile .apib files to generate documentation and unique files to load in mock server')
             ->addArgument(
                 'path',
-                InputArgument::OPTIONAL,
-                'Base folder to start to search files index.apib',
-                dirname(__DIR__, 2) . DIRECTORY_SEPARATOR .'md'
+                InputArgument::REQUIRED,
+                'Base folder to start to search files index.apib'
             );
     }
     /**

@@ -18,6 +18,14 @@ The html documentation will be generated from that unique file.
 This tool use [markdown-pp](https://github.com/jreese/markdown-pp) and [aglio](https://github.com/danielgtaylor/aglio) to include 
 request/response files in API blueprint documents and generate html documentation.
 
+You can execute shell script to install `MarkdownPP` and `Aglio`:
+
+```bash
+./install.sh
+```
+
+Or install step by step next commands:
+
 ### Install `markdown-pp`
 
 ```bash
@@ -120,16 +128,16 @@ It will be ready to load in your mock server.
 ### Generate HTML Documentation and files to load in Mock Server
 
 ```bash
-./bin/split-blue c [path]
+./bin/split-blue c <path>
 ```
 
 Example 1:
 
 ```bash
-./bin/split-blue c
+./bin/split-blue c md
 ```
 
-If you do not put argument, the command will search by default inside of folder `md`. It will try to search all files named like `index.apib` to  process include sentences of that file
+It will try to search all files named like `index.apib` to  process include sentences of that file
 and generate output files (`out.apib` and `out.html`) in folder `Build`, if this not exist it will create it in the same level that `index.apib` file
 
 Example content `index.apib`:
@@ -162,14 +170,10 @@ It will generate files:
 You can execute integration tests with next command:
 
 ```bash
-vendor/bin/phpunit -c .
+vendor/bin/phpunit
 ```
 
 ## Screenshots
-
-`./bin/split-blue c`
-
-![Command without argument](resources/command-without-argument.png)
 
 `./bin/split-blue c md/example/MyAPI/V2`
 
